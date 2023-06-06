@@ -4,7 +4,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function App() {
-  const [countdown, setCountdown] = useState(20); // 20 seconds per slide
+  const [countdown, setCountdown] = useState(10); // 20 seconds per slide
   const [activeSlide, setActiveSlide] = useState(0); // Active slide index
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
 
   const handleSlideChange = (nextSlide: number) => {
     setActiveSlide(nextSlide);
-    setCountdown(20); // Reset countdown to 20 seconds
+    setCountdown(10); 
   };
 
   const formatTime = (time: number) => {
@@ -45,7 +45,7 @@ function App() {
             className="carousel-provider"
             currentSlide={activeSlide}
             isPlaying={countdown > 0}
-            interval={10000} // 20 seconds per slide
+            interval={10000}
             infinite
           >
             <Slider className="carousel-slider">
